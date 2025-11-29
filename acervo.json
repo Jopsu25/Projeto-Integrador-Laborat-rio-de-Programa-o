@@ -1,0 +1,11 @@
+{
+    "livros": [
+        {
+            "titulo": "Noites Brancas",
+            "autor": "Fiódor Dostoiévski",
+            "genero": "Romance",
+            "ano": "1848"
+        }
+    ],
+    "jogos": []
+}

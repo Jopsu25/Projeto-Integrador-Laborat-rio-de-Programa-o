@@ -1,7 +1,27 @@
+import json
+
 livros = []
 jogos = []
 
+def salvar_dados():
+    with open("acervo.json", "w", encoding="utf-8") as arquivo:
+        json.dump({"livros": livros, "jogos": jogos}, arquivo, ensure_ascii=False, indent=4)
+
+
+def carregar_dados():
+    global livros, jogos
+    try:
+        with open("acervo.json", "r", encoding="utf-8") as arquivo:
+            dados = json.load(arquivo)
+            livros = dados.get("livros", [])
+            jogos = dados.get("jogos", [])
+    except FileNotFoundError:
+        livros = []
+        jogos = []
+
 def menu_principal():
+    carregar_dados()
+
     while True:
         print("Menu")
         print ("\n1. Livros")
@@ -16,6 +36,7 @@ def menu_principal():
             menu_jogos()
         elif opcao == "3":
             print ("Encerrando programa")
+            salvar_dados()
             break
         else:
             print("Opção inválida! Digite Novamente")
@@ -77,21 +98,35 @@ def menu_jogos():
         
 
 def adicionar_livro():
-    print ("Adicionar Livro")
-    titulo = input("\nTitulo: ").strip()
-    autor = input("Autor: ").strip()
-    genero = input("Gênero: ").strip()
-    ano = input("Ano de Lançamento: ").strip()
+    while True:    
+        print ("Adicionar Livro")
+        titulo = input("\nTitulo: ").strip()
+        autor = input("Autor: ").strip()
+        genero = input("Gênero: ").strip()
+        ano = input("Ano de Lançamento: ").strip()
 
-    livro = {
-        "titulo" : titulo,
-        "autor" : autor,
-        "genero" : genero,
-        "ano" : ano,
-    }
+        livro = {
+            "titulo" : titulo,
+            "autor" : autor,
+            "genero" : genero,
+            "ano" : ano,
+        }
 
-    livros.append(livro)
-    print(f"Livro '{titulo}' adicionado com sucesso!")
+        livros.append(livro)
+        print(f"Livro '{titulo}' adicionado com sucesso!")
+
+        print("1.Adicionar outro livro")    
+        print("2.Voltar")
+    
+        opcao = input("Escolha uma opção: ")
+        if opcao == "1":
+            adicionar_livro()
+        elif opcao == "2":
+            salvar_dados()
+            break
+        else:
+            print("Opção Inválida!")
+            opcao = input("Escolha uma opção: ")
 
 def listar_livro():
     while True:
@@ -153,7 +188,7 @@ def buscar_livro():
 
         opcao = input("Escolha uma opção: ")
         if opcao == "1":
-            buscar_livro
+            buscar_livro()
         elif opcao == "2":
             break
         else:
