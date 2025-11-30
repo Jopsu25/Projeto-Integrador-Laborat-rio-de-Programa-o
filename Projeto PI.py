@@ -136,7 +136,6 @@ def listar_livro():
         
         if not livros :
             print("\n Nenhum livro cadastrado")
-            print("1. Voltar")
         else:
             for i, livro in enumerate (livros, start = 1):
                 print (f"{i} {livro['titulo']}, {livro['autor']}, {livro['ano']}, {livro['genero']}")
