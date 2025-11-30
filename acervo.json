@@ -5,7 +5,74 @@
             "autor": "Fiódor Dostoiévski",
             "genero": "Romance",
             "ano": "1848"
+        },
+        {
+            "titulo": "O Apanhador no Campo de Centeio",
+            "autor": "J.D Salinger",
+            "genero": "Romance",
+            "ano": "1951"
+        },
+        {
+            "titulo": "Os Androides Sonham com Ovelhas Elétricas?",
+            "autor": "PKD",
+            "genero": "Ficção Científica",
+            "ano": "1968"
+        },
+        {
+            "titulo": "A Metamorfose",
+            "autor": "Franz Kafka",
+            "genero": "Ficção Científica",
+            "ano": "1915"
+        },
+        {
+            "titulo": "Manifesto Comunista",
+            "autor": "Karl Marx e Friedrich Engels",
+            "genero": "Politico",
+            "ano": "1848"
+        },
+        {
+            "titulo": "Ubik",
+            "autor": "PKD",
+            "genero": "Ficção Científica",
+            "ano": "1969"
+        },
+        {
+            "titulo": "Nas Montanhas da Loucura",
+            "autor": "H.P. Lovecraft",
+            "genero": "Terror/Ficção Científica",
+            "ano": "1936"
         }
     ],
-    "jogos": []
+    "jogos": [
+        {
+            "titulo": "Chrono Trigger",
+            "autor": "Square Co",
+            "genero": "JRPG",
+            "ano": "1995"
+        },
+        {
+            "titulo": "Donkey Kong Country",
+            "autor": "Rare",
+            "genero": "Plataforma",
+            "ano": "1994"
+        },
+        {
+            "titulo": "Harvest Moon",
+            "autor": "Natsume",
+            "genero": "RPG/Simulação",
+            "ano": "1996"
+        },
+        {
+            "titulo": "The Legend of Zelda: Oot",
+            "autor": "Nitendo",
+            "genero": "Ação/Aventura",
+            "ano": "1998"
+        },
+        {
+            "titulo": "The Legend of Zelda: Majoras Mask",
+            "autor": "Nitendo",
+            "genero": "Ação/Aventura",
+            "ano": "2000"
+        }
+    ]
 }
